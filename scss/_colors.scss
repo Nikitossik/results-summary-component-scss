@@ -1,0 +1,13 @@
+@use "sass:color";
+$opacity: 5%;
+
+@each $key,
+$val in $primary-colors {
+    .text-#{$key} {
+        color: $val;
+    }
+
+    .bg-#{$key}-light {
+        background-color: mix($val, #fff, $opacity);
+    }
+}
